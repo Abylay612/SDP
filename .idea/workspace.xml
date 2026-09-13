@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3444a31-9719-4eab-b360-deb266ff3b14" name="Changes" comment="Initial Empty Commit">
-      <change afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CharacterBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CharacterDirector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="c3444a31-9719-4eab-b360-deb266ff3b14" name="Changes" comment="Commit 2: Creation of Classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +20,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Abylay612&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "searchQuery": "main",
+      "state": "OPEN",
+      "assignee": "Abylay612"
+    }
+  ],
+  "lastFilter": {
+    "searchQuery": "main",
+    "state": "OPEN",
+    "assignee": "Abylay612"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Abylay612/SDP.git&quot;,
     &quot;accountId&quot;: &quot;65648ab8-e1cd-4dc2-b1a9-5dba4bdf1d60&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -93,7 +102,7 @@
       <workItem from="1789278029485" duration="269000" />
       <workItem from="1789278336390" duration="19000" />
       <workItem from="1789278443690" duration="402000" />
-      <workItem from="1789278854827" duration="5087000" />
+      <workItem from="1789278854827" duration="8846000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Empty Commit">
       <option name="closed" value="true" />
@@ -103,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788973648593</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit 2: Creation of Classes">
+      <option name="closed" value="true" />
+      <created>1789296932404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1789296932404</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Empty Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Empty Commit" />
+    <MESSAGE value="Commit 2: Creation of Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 2: Creation of Classes" />
   </component>
 </project>
