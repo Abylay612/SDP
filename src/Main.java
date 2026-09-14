@@ -1,16 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        CharacterBuilder character1 = new CharacterBuilder.Builder()
-                .setName("Thorin")
-                .setCharacterClass("Warrior")
-                .setLevel(10)
-                .setHealth(150)
-                .setMana(20)
-                .setWeapon("Greatsword")
-                .setArmor("Heavy Plate")
+        CharacterBuilder builder = new CharacterBuilder();
+        CharacterDirector director = new CharacterDirector();
+
+        // 1. Creating a standard character via Director
+        Character warrior = director.constructWarrior(builder);
+        System.out.println("--- Preset Character (Director) ---");
+        System.out.println(warrior);
+
+        // 2. Creating a unique character directly via the Builder
+        Character customRogue = builder.reset()
+                .setName("Valeera")
+                .setCharacterClass("Rogue")
+                .setLevel(5)
+                .setHealth(110)
+                .setMana(60)
+                .setWeapon("Daggers")
+                .setArmor("Leather")
                 .build();
-        System.out.println(character1.getName() + " " + character1.getCharacterClass() + " "
-                + character1.getLevel() + " " + character1.getHealth() + " " + character1.getMana() +
-                " " + character1.getWeapon() + " " + character1.getArmor() + " " + character1.getArmor());
+
+        System.out.println("\n--- Custom Character (Builder) ---");
+        System.out.println(customRogue);
     }
 }

@@ -7,118 +7,74 @@ public class CharacterBuilder {
     private String weapon;
     private String armor;
 
-    public CharacterBuilder(Builder builder){
-        this.name = builder.name;
-        this.characterClass = builder.characterClass;
-        this.health = builder.health;
-        this.mana = builder.mana;
-        this.level = builder.level;
-        this.weapon = builder.weapon;
-        this.armor = builder.armor;
+    public CharacterBuilder() {
+        reset();
     }
 
-    public String getName() {
-        return name;
+    // Сброс состояния к базовым значениям
+    public CharacterBuilder reset() {
+        this.name = "Unknown Hero";
+        this.characterClass = "Novice";
+        this.level = 1;
+        this.health = 100;
+        this.mana = 50;
+        this.weapon = "Fists";
+        this.armor = "Cloth";
+        return this;
     }
 
-    public void setName(String name) {
+    public CharacterBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
-    public String getCharacterClass() {
-        return characterClass;
-    }
-
-    public void setCharacterClass(String characterClass) {
+    public CharacterBuilder setCharacterClass(String characterClass) {
         this.characterClass = characterClass;
+        return this;
     }
 
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public int getMana() {
-        return mana;
-    }
-
-    public void setMana(int mana) {
-        this.mana = mana;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
+    public CharacterBuilder setLevel(int level) {
+        if (level < 1) {
+            throw new IllegalArgumentException("Level must be at least 1!");
+        }
         this.level = level;
+        return this;
     }
 
-    public String getWeapon() {
-        return weapon;
+    public CharacterBuilder setHealth(int health) {
+        if (health <= 0) {
+            throw new IllegalArgumentException("Health must be greater than 0!");
+        }
+        this.health = health;
+        return this;
     }
 
-    public void setWeapon(String weapon) {
+    public CharacterBuilder setMana(int mana) {
+        if (mana < 0) {
+            throw new IllegalArgumentException("Mana cannot be negative!");
+        }
+        this.mana = mana;
+        return this;
+    }
+
+    public CharacterBuilder setWeapon(String weapon) {
         this.weapon = weapon;
+        return this;
     }
 
-    public String getArmor() {
-        return armor;
-    }
-
-    public void setArmor(String armor) {
+    public CharacterBuilder setArmor(String armor) {
         this.armor = armor;
+        return this;
     }
 
-    public static class Builder{
-        private String name;
-        private String characterClass;
-        private int health;
-        private int mana;
-        private int level;
-        private String weapon;
-        private String armor;
+    public Character build() {
+        validateCharacterState();
+        return new Character(name, characterClass, level, health, mana, weapon, armor);
+    }
 
-        public Builder setName(String name){
-            this.name = name;
-            return this;
-        }
-
-        public Builder setCharacterClass(String characterClass){
-            this.characterClass = characterClass;
-            return this;
-        }
-
-        public Builder setHealth(int health){
-            this.health = health;
-            return this;
-        }
-
-        public Builder setMana(int mana){
-            this.mana = mana;
-            return this;
-        }
-
-        public Builder setLevel(int level){
-            this.level = level;
-            return this;
-        }
-
-        public Builder setWeapon(String weapon){
-            this.weapon = weapon;
-            return this;
-        }
-
-        public Builder setArmor(String armor){
-            this.armor = armor;
-            return this;
-        }
-
-        public CharacterBuilder build(){
-            return new CharacterBuilder(this);
+    private void validateCharacterState() {
+        if (this.name == null || this.name.trim().isEmpty()) {
+            throw new IllegalStateException("Character construction failed: Name cannot be empty.");
         }
     }
 }
