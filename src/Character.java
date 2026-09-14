@@ -44,4 +44,17 @@ public class Character {
     public String getArmor(){
         return armor;
     }
+
+    @Override
+    public String toString() {
+        return "Character {" +
+                "Name='" + name + '\'' +
+                ", Class='" + characterClass + '\'' +
+                ", Health=" + health +
+                ", Mana=" + mana +
+                ", Level=" + level +
+                ", Weapon='" + weapon + '\'' +
+                ", Armor='" + armor + '\'' +
+                '}';
+    }
 }
